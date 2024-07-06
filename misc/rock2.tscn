@@ -1,0 +1,72 @@
+[gd_scene load_steps=12 format=3 uid="uid://dqk8jsj0s6h1o"]
+
+[ext_resource type="PackedScene" uid="uid://db5pstyv6j32n" path="res://misc/rock1.tscn" id="1_k5nqm"]
+[ext_resource type="Texture2D" uid="uid://dkn75moranps2" path="res://addons/Tiny Swords/Terrain/Water/Rocks/Rocks_02.png" id="2_70yt4"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nux58"]
+atlas = ExtResource("2_70yt4")
+region = Rect2(0, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3hv8n"]
+atlas = ExtResource("2_70yt4")
+region = Rect2(128, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ewh4o"]
+atlas = ExtResource("2_70yt4")
+region = Rect2(256, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vc02d"]
+atlas = ExtResource("2_70yt4")
+region = Rect2(384, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2rjqi"]
+atlas = ExtResource("2_70yt4")
+region = Rect2(512, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rryla"]
+atlas = ExtResource("2_70yt4")
+region = Rect2(640, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_eoh5l"]
+atlas = ExtResource("2_70yt4")
+region = Rect2(768, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ghnda"]
+atlas = ExtResource("2_70yt4")
+region = Rect2(896, 0, 128, 128)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_6m4c4"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nux58")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3hv8n")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ewh4o")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vc02d")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2rjqi")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rryla")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_eoh5l")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ghnda")
+}],
+"loop": true,
+"name": &"default",
+"speed": 10.0
+}]
+
+[node name="Rock" instance=ExtResource("1_k5nqm")]
+sprite_frames = SubResource("SpriteFrames_6m4c4")
+frame_progress = 0.786646

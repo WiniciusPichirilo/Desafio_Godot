@@ -1,0 +1,140 @@
+[gd_scene load_steps=12 format=3 uid="uid://dxj3cmg35bnaa"]
+
+[ext_resource type="Script" path="res://ui/game_ui.gd" id="1_0gl2s"]
+[ext_resource type="Texture2D" uid="uid://duc2gjvxkta4d" path="res://addons/Tiny Swords/UI/Banners/Banner_Horizontal.png" id="1_qetjq"]
+[ext_resource type="Texture2D" uid="uid://bcjq0ovgsn23r" path="res://addons/Tiny Swords/Resources/Resources/M_Idle_(NoShadow).png" id="3_2x838"]
+[ext_resource type="Texture2D" uid="uid://c6jeeqvv6k6fh" path="res://addons/Tiny Swords/Resources/Resources/G_Idle_(NoShadow).png" id="4_4m3fq"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_corjg"]
+texture = ExtResource("1_qetjq")
+axis_stretch_horizontal = 2
+axis_stretch_vertical = 2
+region_rect = Rect2(32, 48, 128, 128)
+
+[sub_resource type="SystemFont" id="SystemFont_a1dun"]
+font_names = PackedStringArray("Impact")
+font_weight = 999
+subpixel_positioning = 0
+
+[sub_resource type="LabelSettings" id="LabelSettings_gg4rs"]
+font = SubResource("SystemFont_a1dun")
+font_size = 20
+font_color = Color(0, 0, 0, 1)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0e6k2"]
+atlas = ExtResource("3_2x838")
+region = Rect2(40, 48, 56, 56)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_due0u"]
+atlas = ExtResource("4_4m3fq")
+region = Rect2(32, 40, 64, 64)
+
+[sub_resource type="SystemFont" id="SystemFont_1rfb6"]
+font_names = PackedStringArray("Impact")
+font_weight = 999
+subpixel_positioning = 0
+
+[sub_resource type="LabelSettings" id="LabelSettings_auyvj"]
+font = SubResource("SystemFont_1rfb6")
+font_size = 32
+outline_size = 4
+outline_color = Color(0, 0, 0, 1)
+
+[node name="GameUI" type="CanvasLayer"]
+script = ExtResource("1_0gl2s")
+
+[node name="Panel" type="Panel" parent="."]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -304.0
+offset_top = 13.0
+offset_right = -255.0
+offset_bottom = 55.0
+grow_horizontal = 0
+scale = Vector2(5.95492, 2.42397)
+size_flags_horizontal = 6
+size_flags_vertical = 6
+theme_override_styles/panel = SubResource("StyleBoxTexture_corjg")
+
+[node name="GoldLabel" type="Label" parent="Panel"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -7.83759
+offset_top = 9.96424
+offset_right = 39.1624
+offset_bottom = 42.9642
+grow_horizontal = 2
+scale = Vector2(0.160777, 0.400276)
+text = "1234"
+label_settings = SubResource("LabelSettings_gg4rs")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="MeatLabel" type="Label" parent="Panel"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = 7.5
+offset_top = 10.0
+offset_right = 60.5
+offset_bottom = 44.0
+grow_horizontal = 2
+scale = Vector2(0.160777, 0.400276)
+text = "1234"
+label_settings = SubResource("LabelSettings_gg4rs")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="MeatTextureRect" type="TextureRect" parent="Panel"]
+layout_mode = 1
+offset_left = 25.1032
+offset_top = 5.92468
+offset_right = 153.103
+offset_bottom = 133.925
+scale = Vector2(0.0570019, 0.138148)
+texture = SubResource("AtlasTexture_0e6k2")
+
+[node name="GoldTextureRect" type="TextureRect" parent="Panel"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -17.0458
+offset_top = 4.57816
+offset_right = 71.9542
+offset_bottom = 93.5782
+grow_horizontal = 2
+scale = Vector2(0.109677, 0.219298)
+texture = SubResource("AtlasTexture_due0u")
+
+[node name="TimerLabel" type="Label" parent="."]
+unique_name_in_owner = true
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -49.0
+offset_right = 49.0
+offset_bottom = 55.0
+grow_horizontal = 2
+text = "08:50"
+label_settings = SubResource("LabelSettings_auyvj")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label" type="Label" parent="."]
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -148.0
+offset_top = -23.0
+grow_horizontal = 0
+grow_vertical = 0
+text = "Development Build"

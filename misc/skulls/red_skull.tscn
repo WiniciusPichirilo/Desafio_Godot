@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://d4hs43l5j842u"]
+
+[ext_resource type="PackedScene" uid="uid://bo84ea4y85c0s" path="res://misc/skulls/skull.tscn" id="1_qiwqm"]
+
+[node name="RedSkull" instance=ExtResource("1_qiwqm")]
+modulate = Color(1, 0.664335, 0.611912, 1)

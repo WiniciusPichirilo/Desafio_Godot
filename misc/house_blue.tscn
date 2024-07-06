@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://dupyhm3l4imug"]
+
+[ext_resource type="Texture2D" uid="uid://dwewy3v3dpsh" path="res://addons/Tiny Swords/Factions/Knights/Buildings/House/House_Blue.png" id="1_35t1r"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_05lxd"]
+size = Vector2(118.4, 85.6)
+
+[node name="HouseBlue" type="Sprite2D"]
+position = Vector2(29, -901)
+scale = Vector2(2.5, 2.5)
+texture = ExtResource("1_35t1r")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(0.800003, 28.8)
+scale = Vector2(1, 1)
+shape = SubResource("RectangleShape2D_05lxd")
